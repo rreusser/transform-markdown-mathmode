@@ -26,6 +26,7 @@
     "gulp"
   ],
   "devDependencies": {
-    "tap-spec": "^4.0.2"
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
   }
 }
