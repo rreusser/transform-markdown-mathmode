@@ -1,9 +1,13 @@
 'use strict'
 
-var transformMarkdown = require('../lib')
-  , fs = require('fs')
+var transformMathmode = require('../lib')
 
 process.stdin
-  .pipe( transformMarkdown() )
+  .pipe(
+    transformMathmode({
+      inline:  function(tex, cb) { cb(  '<' + tex + '>'  ) },
+      display: function(tex, cb) { cb( '<<' + tex + '>>' ) }
+    })
+  )
   .pipe( process.stdout )
 

@@ -4,7 +4,8 @@
   "description": "Transform LaTeX equations asynchronously in a stream of markdown",
   "main": "index.js",
   "scripts": {
-    "test": "node test/*.js"
+    "test": "node test/*.js",
+    "build": "cat README.mdtex | node example/transform.js > README.md"
   },
   "author": "Ricky Reusser",
   "license": "MIT",
@@ -14,6 +15,16 @@
     "stream-combiner": "^0.2.2",
     "through2": "^2.0.0"
   },
+  "keywords": [
+    "tex",
+    "latex",
+    "stream",
+    "markdown",
+    "mathmode",
+    "equations",
+    "typeset",
+    "gulp"
+  ],
   "devDependencies": {
     "tap-spec": "^4.0.2"
   }
