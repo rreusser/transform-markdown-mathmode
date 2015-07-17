@@ -31,7 +31,6 @@ process.stdin
 
 This is just invoked with:
 
-
 ```
 $ cat README.mdtex | node example/transform.js > README.md
 ```
@@ -39,6 +38,12 @@ $ cat README.mdtex | node example/transform.js > README.md
 This transformation isn't particularly interesting, but it means you can perform an arbitrarily complicated asynchronous task each time you encounter an equation.
 
 ## Usage
+
+To install, run:
+
+```
+$ npm install transform-markdown-mathmode
+```
 
 #### `require('transform-markdown-mathmode')( options )`
 Create a transform stream that performs the transformation.
