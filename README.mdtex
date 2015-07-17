@@ -1,5 +1,7 @@
 # transform-markdown-mathmode
 
+[![Build Status](https://travis-ci.org/rreusser/transform-markdown-mathmode.svg)](https://travis-ci.org/rreusser/transform-markdown-mathmode) [![Dependency Status](https://david-dm.org/rreusser/transform-markdown-mathmode.svg)](https://david-dm.org/rreusser/transform-markdown-mathmode) [![npm version](https://badge.fury.io/js/transform-markdown-mathmode.svg)](http://badge.fury.io/js/transform-markdown-mathmode)
+
 Transform LaTeX equations asynchronously in a stream of markdown
 
 ## Introduction
