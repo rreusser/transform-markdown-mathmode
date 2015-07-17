@@ -1,7 +1,7 @@
 'use strict'
 
 var test = require('tape')
-  , lmm = require('../lib')
+  , tmm = require('../lib')
   , Stream = require('stream')
 
 var tapSpec = require('tap-spec');
@@ -17,7 +17,7 @@ var transformInline  = function(str,cb) {
 }
 var transformDisplay = function(str,cb) {
   setTimeout(function() {
-    ct('<<' + str + '>>')
+    cb('<<' + str + '>>')
   },10)
 }
 
@@ -30,7 +30,7 @@ function parseString(str,done) {
   input.push(str)
   input.push(null)
 
-  input.pipe(lmm(transformInline,transformDisplay)).pipe(output)
+  input.pipe(tmm(transformInline,transformDisplay)).pipe(output)
 
   output._write = function(chunk,enc,cb) {
     outputBuffer += chunk
@@ -43,6 +43,7 @@ function parseString(str,done) {
     done(outputBuffer)
   })
 }
+
 test('transforms inline equations',function(t) {
   parseString('test $y=x$ equation',function(result) {
     t.equal(result,'test <y=x> equation')
@@ -170,3 +171,9 @@ test('transforms inline equations asynchronously',function(t) {
   })
 })
 
+test('handles weird corner cases',function(t) {
+  parseString("to \\$\\`$y = x$\\`\\$ and display equations like \\`$$y = x$$\\`.",function(result) {
+    t.equal(result,"to $`<y = x>`$ and display equations like `<<y = x>>`.")
+    t.end()
+  })
+})
