@@ -1,0 +1,18 @@
+# Heading
+
+Lorem $y = 1$ ipsum dolor sit amet, $$y = 2$$ consectetur costs \$5.00 adipiscing elit. `verbatim doesn't get transformed $y = 3$`.
+
+$ mathmode in verbatim doesn't get translated$
+
+$$ same for displaystyle $$
+
+$y = 4$
+$$y = 5$$
+
+```
+This is a code block and
+not an equation $y = 6$, so equations
+$$y = 7$$ should not get rewritten.
+```
+
+But it ends gracefully $y = 8$ $$y = 9$$.
