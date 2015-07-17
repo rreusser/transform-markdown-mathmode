@@ -27,6 +27,9 @@ process.stdin
     })
   )
   .pipe( process.stdout )
+
+// Also, note that equations in code blocks don't get transformed! Hooray!
+// $y = x$
 ```
 
 This is just invoked with:
