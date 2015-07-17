@@ -8,7 +8,7 @@ This module takes a stream of [markdown](http://daringfireball.net/projects/mark
 
 ## What it does
 
-As hesitant as I was to parse a stream of markdown, this module uses a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) to track whether a couple different types of blocks are open or closed. I suspect it's probably possible to do this with a couple regexes, but the current complication comes from the need to track open equations across multiple lines of streamed text. That's really all it's doing through. It's pretty simple, carefully tested, and allows simple escaping for corner cases. If there are cases that fail, let me know. If you can do this in five lines of code... I'm not sure I want to know...
+As hesitant as I was to parse a stream of markdown, this module uses a [finite state machine](https://en.wikipedia.org/wiki/Finite-state_machine) to track whether a couple different types of blocks are open or closed. I suspect it's probably possible (and wayyyy easier) to do this with a couple regexes, but the current complication comes from the need to track open equations across multiple lines of streamed text. That's really all it's doing through. It's pretty simple, carefully tested, and allows simple escaping for corner cases. If there are cases that fail, let me know. If you can do this in five lines of code... I'm not sure I want to know...
 
 The primary goal is to transform equations asynchronously while avoiding a bunch of ugly escaping and other workarounds. And to learn how to process streams in node. And write gulp plugins. And avoid typesetting equations in Github READMEs by hand.
 
