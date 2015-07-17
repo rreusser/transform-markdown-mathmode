@@ -1,7 +1,7 @@
 {
-  "name": "locate-markdown-mathmode",
+  "name": "transform-markdown-mathmode",
   "version": "0.1.0",
-  "description": "Transform things that look like equations in markdown",
+  "description": "Transform LaTeX equations in a stream of markdown",
   "main": "index.js",
   "scripts": {
     "test": "node test/*.js"
@@ -15,7 +15,6 @@
     "through2": "^2.0.0"
   },
   "devDependencies": {
-    "split": "^1.0.0",
     "tap-spec": "^4.0.2"
   }
 }

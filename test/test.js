@@ -1,7 +1,7 @@
 'use strict'
 
 var test = require('tape')
-  , lmm = require('../')
+  , lmm = require('../lib')
   , Stream = require('stream')
 
 var tapSpec = require('tap-spec');
