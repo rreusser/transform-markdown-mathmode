@@ -37,13 +37,15 @@ $ cat README.mdtex | node example/transform.js > README.md
 
 This transformation isn't particularly interesting, but it means you can perform an arbitrarily complicated asynchronous task each time you encounter an equation.
 
-## Usage
+## Installation
 
 To install, run:
 
 ```
 $ npm install transform-markdown-mathmode
 ```
+
+## Usage
 
 #### `require('transform-markdown-mathmode')( options )`
 Create a transform stream that performs the transformation.
