@@ -1,6 +1,6 @@
 {
   "name": "transform-markdown-mathmode",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Transform LaTeX equations asynchronously in a stream of markdown",
   "main": "lib/index.js",
   "scripts": {
