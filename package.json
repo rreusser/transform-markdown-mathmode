@@ -1,11 +1,15 @@
 {
   "name": "transform-markdown-mathmode",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Transform LaTeX equations asynchronously in a stream of markdown",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test/*.js",
+    "test": "node test/test.js && node test/extract-parameters.js",
     "build": "cat README.mdtex | node example/transform.js > README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rreusser/transform-markdown-mathmode.git"
   },
   "author": "Ricky Reusser",
   "license": "MIT",
